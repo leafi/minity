@@ -7,11 +7,11 @@ Alternative subline: 'How to write a Minecraft client in a mere 365 days*!'
 
 \* deadline not guaranteed
 
-# Show me the screenies!
+## Show me the screenies!
 
-![screenshot 0](https://www.dropbox.com/s/i4uevf2v5qgqfl1/minity_ss_0.png)
+![screenshot 0](http://www.dropbox.com/s/i4uevf2v5qgqfl1/minity_ss_0.png)
 
-# What's done?
+## What's done?
 
 Very little. Don't get your hopes too high this will ever pan out.
 
@@ -27,11 +27,11 @@ No gameplay is done yet. Fair ways off yet.
 
 No networking is done yet. You can't connect to anything.
 
-# Minimalism
+## Minimalism
 
 At the moment we're very minimalistic, in that I haven't written anything yet. However, the idea is to keep a very maintainable and hackable codebase, while supporting most of the features of the vanilla Minecraft client.
 
-# Performance
+## Performance
 
 On my retina MacBook Pro with an Intel HD 5000 at 1024x640, we currently get 50 FPS staring from one edge of the world into the center - with the camera & fog set to only show 64 blocks in any direction. Not the best, but playable.
 
@@ -39,11 +39,11 @@ On a desktop with modern AMD/Nvidia cards we can just render the whole 256^3 wor
 
 This will be revised once we have support for non-full blocks.
 
-# Unity Free vs. Unity Pro
+## Unity Free vs. Unity Pro
 
 Targetting Unity Free, at least for now. It seems to me to defeat the whole point of this if you need to pay Unity to make use of the code.
 
-# License
+## License
 
 Apache 2 licensed; do what thou wilt, more or less. Distribute it on your site or sell it if you want.
 
