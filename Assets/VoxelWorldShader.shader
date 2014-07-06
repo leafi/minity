@@ -4,15 +4,16 @@
 		_Voxels ("Voxels (RGBA) (Dynamic)", 3D) = "white" {}
 	}
 	SubShader {
-		Tags { "RenderType"="Opaque" }
+		Tags { "RenderType"="Geometry" }
 		//LOD 200
 		//Blend SrcAlpha OneMinusSrcAlpha 
+		Blend Off
 		//Cull Off
 		
 		CGPROGRAM
 		#pragma surface surf Lambert
 		//#pragma surface surf Flat
-		//#pragma profileoption MaxTexIndirections=5
+		#pragma profileoption MaxTexIndirections=5
 		#pragma glsl
 		#pragma target 3.0
 		  
@@ -45,21 +46,22 @@
 			if (answer < 1.0) {
 				discard;
 				o.Albedo = half3(0.0, 0.0, 0.0);
-				o.Alpha = 0.0;
-			}
+				//o.Alpha = 0.0;
+			} else {
 			
-			float2 uv0 = float2(floor(fmod(answer, GRID_SIZE)), floor(answer / GRID_SIZE)) / GRID_SIZE + 
-		 		16.0 * fmod(IN.uv_TextureAtlas, 1.0/256.0);
+				float2 uv0 = float2(floor(fmod(answer, GRID_SIZE)), floor(answer / GRID_SIZE)) / GRID_SIZE + 
+			 		16.0 * fmod(IN.uv_TextureAtlas, 1.0/256.0);
 
-			float2 uv_dx = ddx( IN.uv_TextureAtlas );
-			float2 uv_dy = ddy( IN.uv_TextureAtlas );
+				float2 uv_dx = ddx( IN.uv_TextureAtlas );
+				float2 uv_dy = ddy( IN.uv_TextureAtlas );
 
-			float4 rgbb = tex2D(_TextureAtlas, uv0, uv_dx, uv_dy);
+				float4 rgbb = tex2D(_TextureAtlas, uv0, uv_dx, uv_dy);
 
-			//float4 rgbb = tex2D(_TextureAtlas, uv0);
+				//float4 rgbb = tex2D(_TextureAtlas, uv0);
 
-			o.Albedo = rgbb.rgb;
-			o.Alpha = rgbb.a;
+				o.Albedo = rgbb.rgb;
+				//o.Alpha = rgbb.a;
+			}
 		}
 
 		ENDCG
