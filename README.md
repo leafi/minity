@@ -33,8 +33,8 @@ At the moment we're very minimalistic, in that I haven't written anything yet. H
 
 ## Requirements
 
-- MineLib.Network and its dependencies (https://github.com/umby24/CWrapped, https://github.com/fragmer/fNbt)
-- Unity Pro
+- Unity Pro (& you need to import the Pro Standard assets, they're not in git!)
+- MineLib.Network & its dependencies are used, but some DLLs are already shipped so you don't need to worry unless you want to upgrade something.
 
 ## Performance
 
