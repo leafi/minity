@@ -31,17 +31,28 @@ No networking is done yet. You can't connect to anything.
 
 At the moment we're very minimalistic, in that I haven't written anything yet. However, the idea is to keep a very maintainable and hackable codebase, while supporting most of the features of the vanilla Minecraft client.
 
+## Requirements
+
+- MineLib.Network and its dependencies (https://github.com/umby24/CWrapped, https://github.com/fragmer/fNbt)
+- Unity Pro
+
 ## Performance
 
 On my retina MacBook Pro with an Intel HD 5000 at 1024x640, we currently get 50 FPS staring from one edge of the world into the center - with the camera & fog set to only show 64 blocks in any direction. Not the best, but playable.
 
+Update: 25 FPS with the full 256 block range! Woo!
+
 On a desktop with modern AMD/Nvidia cards we can just render the whole 256^3 world at 1920x1080 and get >120 FPS.
 
-This will be revised once we have support for non-full blocks.
+This will be revised as the project zigzags its way to completion.
 
 ## Unity Free vs. Unity Pro
 
-Targetting Unity Free, at least for now. It seems to me to defeat the whole point of this if you need to pay Unity to make use of the code.
+Targetting Unity Pro. Grab the 30 day trial. Sorry.
+
+(It shouldn't be too challenging to get this going on Unity Free, this said. Contact me for versions of the shaders that don't use 3D textures.)
+
+((Patches to make this work better with Unity Free without crapping up the codebase too much are welcomed readily.))
 
 ## License
 
